@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI NFT Forge Design System - Cyberpunk Web3 Aesthetic */
+
+@layer base {
+  :root {
+    --background: 220 27% 8%;
+    --foreground: 280 15% 95%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 280 15% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 280 15% 95%;
+
+    --primary: 270 91% 65%;
+    --primary-foreground: 220 27% 8%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 280 15% 85%;
+
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 195 100% 50%;
+    --accent-foreground: 220 27% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 27% 8%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --ring: 270 91% 65%;
+
+    /* AI NFT Forge Custom Colors */
+    --neon-purple: 270 91% 65%;
+    --neon-blue: 195 100% 50%;
+    --neon-pink: 320 100% 70%;
+    --deep-space: 220 27% 8%;
+    --space-grey: 240 15% 15%;
+    --glass-bg: 240 15% 15%;
+    --glass-border: 240 15% 25%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 65%), hsl(195 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(320 100% 70%), hsl(270 91% 65%));
+    --gradient-glass: linear-gradient(135deg, 
+      hsl(240 15% 15% / 0.9), 
+      hsl(240 15% 20% / 0.7)
+    );
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(220 27% 8%), 
+      hsl(240 15% 12%), 
+      hsl(220 27% 8%)
+    );
+
+    /* Shadows & Glows */
+    --glow-purple: 0 0 30px hsl(270 91% 65% / 0.3);
+    --glow-blue: 0 0 30px hsl(195 100% 50% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(220 27% 8% / 0.4);
+    --shadow-intense: 0 25px 50px hsl(220 27% 8% / 0.6);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .glass-card {
+    @apply bg-gradient-to-br from-glass-bg/90 to-glass-bg/70 backdrop-blur-xl border border-glass-border/50 rounded-lg;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .neon-glow {
+    box-shadow: var(--glow-purple);
+    transition: var(--transition-smooth);
+  }
+
+  .neon-glow:hover {
+    box-shadow: var(--glow-purple), var(--glow-blue);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-bg {
+    background: var(--gradient-hero);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .ai-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(270 91% 65% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(195 100% 50% / 0.1) 0%, transparent 50%);
+  }
+}
+
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: var(--glow-purple);
+    opacity: 0.8;
+  }
+  50% { 
+    box-shadow: var(--glow-purple), var(--glow-blue);
+    opacity: 1;
+  }
+}
