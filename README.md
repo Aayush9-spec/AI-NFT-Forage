@@ -46,10 +46,11 @@ yarn install
 3. Create a .env.local file (or whichever your project uses) and add environment variables
 NEXT_PUBLIC_API_KEY=your_ai_api_key_here  
 NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourContractAddress  
-NEXT_PUBLIC_CHAIN_ID=1          # or the network you use
+NEXT_PUBLIC_CHAIN_ID=1
+# or the network you use
 
  
-4. Run locally
+5. Run locally
 npm run dev  
 # or  
 yarn dev  
@@ -95,12 +96,12 @@ Integrate other blockchain networks (Polygon, Solana, BNB Chain).
 Implement royalties, metadata standards, lazy-minting.
 Include user profiles, collections, analytics dashboard.
 Deploy your own smart contract or integrate a ready-made drop system.
+
 📄 License
 MIT © 2025 Aayush Kumar Singh
+
+
 🙏 Acknowledgments
 Thanks to the AI-image service provider for enabling creative generation.
 Shoutout to open-source Web3 tooling and libraries.
 Based on inspirations from the NFT and generative art community.
-
-If you like, I can generate a **complete license file**, add **contributor instructions** (e.g., for pull requests), or produce a **GitHub template** (issue templates + pull request templates) as well. Would you like me to add those?
-::contentReference[oaicite:0]{index=0}
